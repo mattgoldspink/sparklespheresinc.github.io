@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="sparklespheres.png">
     <style>
         body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -18,18 +19,18 @@
             overflow: hidden;
         }
         header {
-            background: #333;
+            background: #005A9C;
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
-            border-bottom: #0779e4 3px solid;
+            border-bottom: #f4d03f 3px solid;
         }
         header h1 {
             text-align: center;
             margin: 0;
         }
         nav {
-            background: #444;
+            background: #82ccdd;
             color: #fff;
             padding: 5px;
             text-align: center;
@@ -44,13 +45,26 @@
         }
         .section {
             padding: 20px;
-            background: #f4f4f4;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            background: #E1F5FE; /* Very light blue */
         }
-        .section:nth-child(even) {
-            background: #e2e2e2;
+        .section .content {
+            flex: 1;
+        }
+        .section img {
+            width: 50%;
+            margin: 0 20px;
+        }
+        .section:nth-child(even) .content {
+            order: 2;
+        }
+        .section:nth-child(even) img {
+            margin: 0 20px 0 0;
         }
         .footer {
-            background: #333;
+            background: #60a3bc; /* Muted blue */
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -71,23 +85,23 @@
         <div class="container">
             <a href="#">Home</a>
             <a href="#">About Us</a>
-            <a href="#">Products</a>
         </div>
     </nav>
 
     <section class="container section">
-        <h2>Welcome to Sparkle Spheres Inc</h2>
-        <p>Sparkle Spheres is an eCommerce retail and distribution company with multiple online sales channels and a nationwide dealer network of 200+ retailers.</p>
+        <img src="hangers-1850082_1280.jpg" alt="A photograph of clothes on hangers in a shop.">
+        <div class="content">
+            <h2>Welcome to Sparkle Spheres Inc</h2>
+            <p>Sparkle Spheres is an eCommerce retail and distribution company with multiple online sales channels and a nationwide dealer network of 200+ retailers.</p>
+        </div>
     </section>
 
     <section class="container section">
-        <h2>About Us</h2>
-        <p>Founded in Sacramento, CA, Sparkle Spheres Inc has been at the forefront of innovation in eCommerce industry. Our commitment to excellence and customer satisfaction drives us to continuously expand our product line and improve our services.</p>
-    </section>
-
-    <section class="container section">
-        <h2>Our Products</h2>
-        <p>Our diverse product range includes a variety of sizes, colors, and custom designs to meet all your decorative needs.</p>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Founded in Sacramento, CA, Sparkle Spheres Inc has been at the forefront of innovation in eCommerce industry. Our commitment to excellence and customer satisfaction drives us to continuously expand our product line and improve our services.</p>
+        </div>
+        <img src="bridge-67773_1280.jpg" alt="A photograph of the golden bridge in Sacramento.">
     </section>
 
     <footer class="footer">
