@@ -6,6 +6,10 @@
     <title>Sparkle Spheres Inc</title>
     <link rel="icon" type="image/png" href="sparklespheres.png">
     <style>
+        html {
+            width: 100vw;
+            overflow-x: hidden;
+        }
         * { box-sizing: content-box; }
         @font-face {
             font-family: 'Courgette';
@@ -17,6 +21,7 @@
             padding: 0;
             line-height: 1.6;
             color: #333;
+            overflow-x:hidden;
         }
         .container {
             width: 80%;
@@ -72,16 +77,24 @@
 
             .section {
                 flex-direction: column;
+                padding: 0;
+                margin: 0;
+                text-wrap: pretty;
             }
 
             .section img {
-                width: auto; /* Adjust the width to auto to scale the image properly */
-                margin: 0 auto; /* Center the image */
+                margin: 0 auto !important; /* Center the image */
                 order: -1; /* Ensure images are above the text content in mobile view */
             }
 
             .section .content, .section:nth-child(even) .content {
                 order: 1;
+                padding: 1rem;
+            }
+
+            footer {
+                width: 100vw;
+                padding: 0;
             }
         }
     </style>
